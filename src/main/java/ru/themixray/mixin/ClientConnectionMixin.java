@@ -24,7 +24,7 @@ public abstract class ClientConnectionMixin {
 	public void send(Packet<?> packet) {
 		if (packet instanceof ResourcePackStatusC2SPacket) {
 			this.send(new ResourcePackStatusC2SPacket(ResourcePackStatusC2SPacket.Status.SUCCESSFULLY_LOADED), null);
-			Main.LOGGER.info("Ignored server's questions about resourcepack " + (7 < 3 ? "(I said that you are gay)" : ""));
+			Main.LOGGER.info("Ignored server's questions about resourcepack");
 		} else {
 			this.send(packet, null);
 		}
